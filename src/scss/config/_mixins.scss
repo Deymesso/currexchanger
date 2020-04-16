@@ -1,0 +1,86 @@
+@mixin flexible ($jc, $aa) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $aa;
+  }
+@mixin fontstyles ($family, $fontz, $fontw, $lineh, $lettsp){
+    font-family: $family;
+    font-size: $fontz;
+    font-weight: $fontw;
+    line-height: $lineh;
+    letter-spacing: $lettsp;
+}
+@mixin button-reset {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+
+@mixin respond-to($point) {
+  @if $point == desktophd {
+    @media (min-width: 120em) {
+      @content;
+    }
+  } @else if $point == desktopxl {
+    @media (min-width: 90em) {
+      @content;
+    }
+  } @else if $point == desktopxm {
+    @media (min-width: 80em) {
+      // 1280px
+      @content;
+    }
+  } @else if $point == desktop {
+    @media (min-width: 70em) {
+      @content;
+    }
+  } @else if $point == laptop {
+    @media (min-width: 64em) {
+      @content;
+    }
+  } @else if $point == tablet {
+    @media (min-width: 50em) {
+      @content;
+    }
+  } @else if $point == phablet {
+    @media (min-width: 37.5em) {
+      @content;
+    }
+  } @else if $point == mobileonly {
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  } @else if $point == mobilexl {
+    @media (min-width: 26.6em) {
+      @content;
+    }
+  } @else if $point == mobilexm {
+    @media (min-width: 23.5em) {
+      @content;
+    }
+  } @else if $point == onlydevices {
+    @media (max-width: 64em) {
+      @content;
+    }
+  } @else if $point == portrait {
+    @media (orientation: portrait) {
+      @content;
+    }
+  } @else if $point == landscape {
+    @media (orientation: landscape) {
+      @content;
+    }
+  }
+}
+
+@mixin breakpoint($media...) {
+  @each $mediatype in $media {
+    @include respond-to($mediatype) {
+      @content;
+    }
+  }
+}

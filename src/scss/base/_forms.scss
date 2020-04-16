@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-size: 16px;
+  height: 100%;
+  width: 100%;
+  // background-color: $bgcolor;
+  // margin-top: 50px;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}

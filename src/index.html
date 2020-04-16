@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="scss/main.css" />
+
+    <title>ValidLine</title>
+  </head>
+  <body>
+    <header>
+      <div class="main-logo">
+        <a href="#">
+          <img src="images/validline-logo.png" alt="ValidLine logo" class="main-logo__img" />
+        </a>
+      </div>
+      <div class="nav">
+        <a href="#" class="nav__dropdown">
+          <img src="images/svg/Vector.svg" alt="dropdown" class="dropdown__img" />
+        </a>
+      </div>
+    </header>
+    <form action="" method="post" class="request-form">
+      <div class="request-form__info">
+        <h1 class="info__title">Надёжный обменник электронных валют</h1>
+        <p class="info__subtitle">
+          Выгодный курс обмена. Накопительная система бонусов. Реферальная система.
+        </p>
+      </div>
+      <div class="request-form__give">
+        <div class="request-form__supp-text">Меняю</div>
+        <select name="give-currency" id="give-currency" class="give__currency-choice">
+          <option value="btc" class="currency-choice__items" selected>Bitcoin</option>
+          <option value="pb24" class="currency-choice__items">Privat 24</option>
+          <option value="qiwi" class="currency-choice__items">Qiwi RUB</option>
+        </select>
+        <div class="request-form__supp-text">Введите сумму</div>
+        <input type="number" class="give__input" />
+        <div class="request-form__dynamic-info">
+          <div class="give__min-value">Минимум: 0.001</div>
+          <div class="give__max-value">Максимум: 0.1</div>
+        </div>
+      </div>
+      <div class="request-form__get">
+        <div class="request-form__supp-text">Получаю</div>
+        <select name="get-currency" id="get-currency" class="get__currency-choice">
+          <option value="btc" class="currency-choice__items">Bitcoin</option>
+          <option value="pb24" class="currency-choice__items" selected>Privat 24</option>
+          <option value="qiwi" class="currency-choice__items">Qiwi RUB</option>
+        </select>
+        <div class="request-form__supp-text">Считаем</div>
+        <input type="number" class="get__input" />
+        <div class="request-form__dynamic-info">
+          <div class="currency-rate">Курс: 573457.27</div>
+          <div class="currency-reserve">Резерв: 473457.27</div>
+        </div>
+      </div>
+      <button type="submit" class="request-form__btn">Обменять</button>
+    </form>
+  </body>
+</html>

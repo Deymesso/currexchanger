@@ -1,0 +1,86 @@
+.request-form {
+  margin: 66px 16px 16px 16px;
+  padding: 16px;
+  background-color: $bgcolor;
+  box-shadow: 0px 0px 8px rgba(8, 51, 90, 0.1), 0px 4px 8px rgba(8, 51, 90, 0.1);
+  border-radius: 8px;
+  @include respond-to(tablet) {
+    padding: 16px 100px;
+  }
+
+  &__info {
+    .info__title {
+      @include fontstyles('Raleway', 24px, 700, 28px, 0.01em);
+      color: $maincolor;
+      margin: 0 0 8px 0;
+    }
+    .info__subtitle {
+      @include fontstyles('Raleway', 12px, 500, 18px, 0.01em);
+      color: #5c5c5c;
+      margin: 0 0 15px 0;
+    }
+    @include respond-to(tablet) {
+      text-align: center;
+    }
+  }
+  &__supp-text {
+    @include fontstyles('Raleway', 13px, 700, 15px, 0.02em);
+    color: #515151;
+    margin-bottom: 8px;
+    @include respond-to(tablet) {
+      padding-left: 20px;
+    }
+  }
+  &__dynamic-info {
+    @include fontstyles('Raleway', 11px, 400, 13px, 0.02em);
+    @include flexible(space-between, center);
+    margin-bottom: 24px;
+    color: #3a3b44;
+    opacity: 0.75;
+  }
+  select,
+  input {
+    @include fontstyles('Raleway', 14px, 700, 16px, 0.02em);
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 8px;
+    padding: 0 0 0 15px;
+    border: 1px solid #cdd4e6;
+    color: #515151;
+    border-radius: 8px;
+    height: 40px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+  }
+
+  &__give {
+    .give__currency-choice {
+      padding-left: 42px;
+      margin-bottom: 12px;
+      background: url(../images/bitcoinico-mob.png) no-repeat 12px center,
+        url(../images/arrow-select-mob.png) no-repeat right 14px center;
+    }
+  }
+  &__get {
+    .get__currency-choice {
+      padding-left: 42px;
+      margin-bottom: 12px;
+      background: url(../images/privat24ico-mob.png) no-repeat 12px center,
+        url(../images/arrow-select-mob.png) no-repeat right 14px center;
+    }
+  }
+  &__btn {
+    @include fontstyles('Raleway', 16px, 700, 19px, 0.02em);
+    width: 100%;
+    height: 43px;
+    background: #095391;
+    color: #f2f2f2;
+    text-align: center;
+    border-radius: 8px;
+  }
+}

@@ -1,0 +1,16 @@
+header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: 50px;
+  @include flexible(space-between, center);
+  background-color: $bgcolor;
+  box-shadow: 0px 0px 8px rgba(8, 51, 90, 0.1), 0px 4px 8px rgba(8, 51, 90, 0.1);
+
+  .main-logo {
+    margin: 15px;
+  }
+  .nav {
+    margin: 15px;
+  }
+}
